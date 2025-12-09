@@ -10,7 +10,7 @@ def test_chat():
 
     # The data we want to send
     payload = {
-        "question": "What does the speaker say about climate change?"
+        "question": "I’m looking for a TED talk about climate change and what individuals can do in their daily lives. Which talk would you recommend?"
     }
 
     print(f"Sending request to {url}...")
@@ -20,10 +20,16 @@ def test_chat():
 
         # Check if call was successful
         if response.status_code == 200:
+            # data = response.json()
+            # print("\n--- SUCCESS! ---")
+            # print(f"AI Response: {data.get('response')}")
+            # print(f"\nContext Retrieved: {len(data.get('context', []))} chunks")
             data = response.json()
+
+            # ADD THIS LINE to see the full raw JSON format:
+            print(json.dumps(data, indent=2))
+
             print("\n--- SUCCESS! ---")
-            print(f"AI Response: {data.get('response')}")
-            print(f"\nContext Retrieved: {len(data.get('context', []))} chunks")
         else:
             print("\n--- ERROR ---")
             print(f"Status Code: {response.status_code}")

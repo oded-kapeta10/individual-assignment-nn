@@ -4,7 +4,7 @@ from pinecone import Pinecone
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 app = Flask(__name__)
-
+app.json.sort_keys = False # do not order the json keys alphabetically
 @app.route('/')
 def home():
     return "<h1>Deployment Successful! The API is running.</h1>"
