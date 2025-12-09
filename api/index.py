@@ -14,8 +14,11 @@ def home():
 # ==========================================
 # IMPORTANT: In Vercel, use Environment Variables for security.
 # For testing locally, you can paste keys here, but DELETE them before pushing to GitHub.
-LLMOD_API_KEY = os.environ.get("LLMOD_API_KEY","sk-d98cBXma0vKhK7FaB3VmGA")
-PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY", "pcsk_abmnu_KFUmKLFy68RxYi1Ur4gAewM9FRGUifEqiwnypmFKamXGHm1CpDymDztcUEHnTk3")
+# LLMOD_API_KEY = os.environ.get("LLMOD_API_KEY","sk-d98cBXma0vKhK7FaB3VmGA")
+# PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY", "pcsk_abmnu_KFUmKLFy68RxYi1Ur4gAewM9FRGUifEqiwnypmFKamXGHm1CpDymDztcUEHnTk3")
+LLMOD_API_KEY = os.environ.get("LLMOD_API_KEY")
+PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
+
 
 INDEX_NAME = "ted-rag"
 CHUNK_SIZE = 1000
