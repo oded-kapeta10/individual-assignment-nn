@@ -44,8 +44,7 @@ openai_api_base = "https://api.llmod.ai/v1",
 chat_model = ChatOpenAI(
 model = "RPRTHPB-gpt-5-mini",  # CORRECT Course Model [cite: 311]
 openai_api_key = LLMOD_API_KEY,
-openai_api_base = "https://api.llmod.ai/v1",
-temperature = 0  # Keep it factual
+openai_api_base = "https://api.llmod.ai/v1"
 )
 
 # ==========================================
