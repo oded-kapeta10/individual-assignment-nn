@@ -78,7 +78,8 @@ def handle_prompt():
         search_results = index.query(
             vector=query_vector,
             top_k=TOP_K,
-            include_metadata=True
+            include_metadata=True,
+            namespace="ns1"
         )
 
         # 4. Construct Context String & Context JSON Array
