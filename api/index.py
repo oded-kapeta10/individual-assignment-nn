@@ -5,6 +5,10 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "<h1>Deployment Successful! The API is running.</h1>"
+
 # ==========================================
 # CONFIGURATION
 # ==========================================
